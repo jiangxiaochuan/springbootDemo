@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: dev
+
+  # \u6709\u5173json \u5E8F\u5217\u5316\u914D\u7F6E
+  jackson:
+    # json \u5E8F\u5217\u5316\u65F6\u95F4
+    date-format: yyyy-MM-dd HH:mm:ss
+    # \u65F6\u533A\u914D\u7F6E
+    time-zone: GMT+8
+    # json \u5E8F\u5217\u5316\u4E3A\u7A7A\u662F\u5426\u663E\u793A null
+    default-property-inclusion: non_null
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: lanlan
+    password: daduyngfD@K*&L21
+    url: jdbc:mysql://192.168.56.101/element_admin?characterEncoding=utf-8&userSSL=false
+
+mybatis-plus:
+  configuration:
+    # mybatis sql \u8BED\u53E5\u6253\u5370
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*Mapper.xml
